@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My First React Component</title>
+    <title>My Component</title>
   </head>
 
   <body>
@@ -11,19 +11,25 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
      <script type="text/babel">
      class MyComponent extends React.Component {
+       constructor() {
+         super();
+         this.state = {date: 'February 4'};
+       }
        render() {
          return (
            <div>
-             <h1>My First React Component!</h1>
+             <h1>Hello {this.props.name}!</h1>
+             <h3>Created on: {this.state.date}</h3>
            </div>
          );
        }
      }
-
      ReactDOM.render(
-       <MyComponent />, document.getElementById('comp')
+       <MyComponent name="Cody"/>, document.getElementById('comp')
      );
      </script>
   </body>
+
+</html>
 
 </html>
