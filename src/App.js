@@ -14,10 +14,11 @@ class App extends Component {
       newTodoDescription: ''
     };
   }
-  deleteTodo(description) {
-    this.setState({
-      todos: this.state.todos.filter((todo, index) => todo.description !== description)
-    });
+  deletetodos(description) {
+    console.log("it's working");
+    //this.setState({
+      //todos: this.state.todos.filter((todos, index) => todos.description !== description)
+    //});
   }
 
   handleChange(e) {

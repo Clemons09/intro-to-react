@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 
 class ToDo extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
 
 
-deleteTodo(description) {
-  this.props.deleteTodo(description);
+deleteToDo(description) {
+  this.props.deleteToDo(description);
 }
   render() {
     return (
       <div className="wrapper">
 
-      <button className="deleteTodo" onClick = {(e) => this.deleteTodo(this.props.description)}>Delete</button> {this.props.deleteTodo}
+      <button className="deleteToDo" onClick = {(e) => this.deleteToDo(this.props.description)}>Delete</button> {this.props.deleteToDo}
 
       <li>
         <input type="checkbox" checked={ this.props.isCompleted } onChange={ this.props.toggleComplete } />
